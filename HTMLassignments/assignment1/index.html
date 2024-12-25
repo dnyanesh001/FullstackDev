@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dnyanesh Bhole Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>Dnyanesh Bhole portfolio</h1>
-        <nav> <a href="#">Home</a> <a href="#">About</a> <a href="#">Contact</a> </nav>
-    </header> <!-- header signifies the introductory content of a page or section -->
+        <h1>Dnyanesh Bhole Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
     <nav>
         <ul>
             <li><a href="#">Products</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Blog </a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
-    </nav> <!-- nav defines section of navigation links -->
+    </nav>
     <aside>
         <h2>About Me</h2>
         <p>Hello! I'm Dnyanesh Nitin Bhole, a software engineer from Jalgaon, Maharashtra.</p>
@@ -72,16 +77,130 @@
                     Life Cycle (SDLC) methodologies to ensure quality and timely delivery.</li>
             </ul>
         </section>
+        <section id="articles">
+            <h2>Articles</h2>
+            <article>
+                <h3>My Journey in Software Engineering</h3>
+                <p>From my early days of coding in school to working on complex projects in the industry, my journey in software engineering has been an exciting adventure. I have learned various programming languages, worked with different technologies, and contributed to many successful projects.</p>
+            </article>
+            <article>
+                <h3>Understanding Automation Testing</h3>
+                <p>Automation testing has revolutionized the way we ensure the quality of software. By using tools like Selenium and frameworks like BDD Cucumber, we can automate repetitive tasks, increase test coverage, and enhance the reliability of our applications.</p>
+            </article>
+        </section>
+        <!-- Table Section -->
+        <section id="sample-table">
+            <h2>Technologies and Tools</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Experience Level</th>
+                        <th>Projects Used In</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Expert</td>
+                        <td>E-commerce Project, Banking Project</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Expert</td>
+                        <td>E-commerce Project, Banking Project</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript (ES6+)</td>
+                        <td>Advanced</td>
+                        <td>E-commerce Project, Banking Project</td>
+                    </tr>
+                    <tr>
+                        <td>React</td>
+                        <td>Intermediate</td>
+                        <td>E-commerce Project</td>
+                    </tr>
+                    <tr>
+                        <td>Node.js</td>
+                        <td>Advanced</td>
+                        <td>E-commerce Project, Banking Project</td>
+                    </tr>
+                    <tr>
+                        <td>SQL</td>
+                        <td>Advanced</td>
+                        <td>Banking Project</td>
+                    </tr>
+                    <tr>
+                        <td>Java Selenium</td>
+                        <td>Intermediate</td>
+                        <td>E-commerce Project, Banking Project</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <section id="contact">
             <h2>Contact</h2>
             <p>Phone: 7448020985</p>
             <p>Email: <a href="mailto:dnyanesh2022@gmail.com">dnyanesh2022@gmail.com</a></p>
         </section>
+        <section id="freelancing-client-form">
+            <h2>Freelancing Client Form</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website">
+
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" min="0" step="0.01">
+
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date">
+
+                <label for="project-type">Project Type:</label>
+                <select id="project-type" name="project-type">
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app">Mobile App</option>
+                    <option value="seo">SEO</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file">
+
+                <label for="terms">Agree to Terms:</label>
+                <input type="checkbox" id="terms" name="terms" required>
+
+                <label for="contact-method">Preferred Contact Method:</label>
+                <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                <label for="contact-phone">Phone</label>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
-    <footer>
-        <p>© 2024 Dnyanesh Nitin Bhole</p>
-        <p>Visit my <a href="https://www.linkedin.com/in/dnyanesh-nitin-bhole">LinkedIn</a> profile for more
-            information.</p>
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">XAcademy</p>
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><img src="images/facebook.png" alt="facebook links"><i class='bx bxl-facebook'>facebook</i></a>
+            <a href="#" class="footer__icon"><img src="images/li.png" alt="linkedin links"><i class='bx bxl-linkedin'>linkedin
+            <a href="#" class="footer__icon"><img src="images/git.png" alt="Github links"><i class='bx bxl-github'>github</i></a>
+        </div>
+        <p>&#169; 2021 copyright all right reserved</p>
     </footer>
 </body>
+
 </html>

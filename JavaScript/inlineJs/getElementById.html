@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gradient-text {
+            font-size: 35px;
+            background: linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Testing for getElementById() Method</h1>
+    <!-- JavaScript can change HTML content -->
+    <h2>JavaScript can change HTML content</h2>
+    <p id="demo">Before click</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="After click"'>Click me!</button><br>
+    JavaScript accepts both '', ""
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'accepted change in quotes'">Change in
+        quotes</button>
+    <p>JavaScript can change src values of img</p>
+    <button title="click to select boys to play"
+        onclick="document.getElementById('playingChildrens').src='images/BoysPlaying.jpg'; document.getElementById('demo1').innerHTML='Boys playing football'">Boys
+        Playing</button>
+    <img id="playingChildrens" src="images/Football.png" style="width: 400px;" alt="football playing children">
+    <button title="click for select girls to play football"
+        onclick="document.getElementById('playingChildrens').src='images/GirlsPlaying.jpg'; document.getElementById('demo1').innerHTML='Girls Playing football'">Girls
+        Playing</button><br>
+    <p id="demo1" style="text-align: Center; display: inline-block;">Football</p><br>
+    <button type="button"
+        onclick="document.getElementById('demo1').classList.add('gradient-text')" title="click this to change the color of this text">Change
+        color</button>
+</body>
+
+</html>
