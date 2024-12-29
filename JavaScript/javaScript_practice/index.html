@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./practice1.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="userInput">
+    <button onclick="showInput()">submit</button>
+    <br>
+    <h1 id="userName">name</h1>
+    <input type="number" name="width" id="width">
+    <input type="number" name="height" id="height">
+    <button onclick="areaOfRectangle()">Submit</button>
+    <h2 id="area">your area is</h2>
+    <script>
+        function areaOfRectangle() {
+            let height, width, area;
+            height = document.getElementById("height").value;
+            width = document.getElementById("width").value;
+            area = height * width;
+            document.getElementById("area").innerHTML = "Your area is " + area;
+        }
+    </script>
+</body>
+
+</html>
