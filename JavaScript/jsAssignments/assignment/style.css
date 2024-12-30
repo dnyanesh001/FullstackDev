@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.parallax-container {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+}
+
+.mountains-bg {
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba');
+    transform: translateZ(-15px) scale(2.5);
+}
+
+.mountains-mid {
+    background-image: url('https://images.unsplash.com/photo-1491904768633-2b7e3e7fede5');
+    transform: translateZ(-10px) scale(2);
+}
+
+.mountains-front {
+    background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606');
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.trees {
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b');
+    transform: translateZ(-2px) scale(1.2);
+}
+
+.content {
+    background: linear-gradient(180deg, rgba(26,26,26,0) 0%, rgba(26,26,26,1) 100px);
+    position: relative;
+    padding: 100px 20px;
+    transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+    transform: translateZ(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+} 
